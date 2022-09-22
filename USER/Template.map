@@ -1,0 +1,227 @@
+Archive member included to satisfy reference by file (symbol)
+
+libsys.a(stm32f10x_gpio.c.o)  CMakeFiles/hello.elf.dir/USER/main.c.o (GPIO_Init)
+libsys.a(stm32f10x_rcc.c.o)   CMakeFiles/hello.elf.dir/USER/main.c.o (RCC_APB2PeriphClockCmd)
+
+Discarded input sections
+
+ .text          0x0000000000000000       0x54 CMakeFiles/hello.elf.dir/USER/main.c.o
+ .data          0x0000000000000000        0x0 CMakeFiles/hello.elf.dir/USER/main.c.o
+ .bss           0x0000000000000000        0x0 CMakeFiles/hello.elf.dir/USER/main.c.o
+ .comment       0x0000000000000000       0x4a CMakeFiles/hello.elf.dir/USER/main.c.o
+ .ARM.attributes
+                0x0000000000000000       0x2d CMakeFiles/hello.elf.dir/USER/main.c.o
+ .text          0x0000000000000000      0x5d8 libsys.a(stm32f10x_gpio.c.o)
+ .data          0x0000000000000000        0x0 libsys.a(stm32f10x_gpio.c.o)
+ .bss           0x0000000000000000        0x0 libsys.a(stm32f10x_gpio.c.o)
+ .comment       0x0000000000000000       0x4a libsys.a(stm32f10x_gpio.c.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d libsys.a(stm32f10x_gpio.c.o)
+ .text          0x0000000000000000      0x7dc libsys.a(stm32f10x_rcc.c.o)
+ .data          0x0000000000000000       0x14 libsys.a(stm32f10x_rcc.c.o)
+ .bss           0x0000000000000000        0x0 libsys.a(stm32f10x_rcc.c.o)
+ .comment       0x0000000000000000       0x4a libsys.a(stm32f10x_rcc.c.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d libsys.a(stm32f10x_rcc.c.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000020000000 0x000000000000c000 xrw
+FLASH            0x0000000008000000 0x0000000000040000 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD CMakeFiles/hello.elf.dir/USER/main.c.o
+LOAD libsys.a
+START GROUP
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a
+END GROUP
+START GROUP
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a
+END GROUP
+START GROUP
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a
+END GROUP
+                0x000000002000c000                _estack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x0000000000000200                _Min_Heap_Size = 0x200
+                0x0000000000000400                _Min_Stack_Size = 0x400
+
+.isr_vector     0x0000000008000000        0x0
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.isr_vector)
+                0x0000000008000000                . = ALIGN (0x4)
+
+.text           0x0000000008000000        0x0
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.text)
+ *(.text*)
+ *(.glue_7)
+ .glue_7        0x0000000008000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0000000008000000        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x0000000008000000                . = ALIGN (0x4)
+                0x0000000008000000                _etext = .
+
+.vfp11_veneer   0x0000000008000000        0x0
+ .vfp11_veneer  0x0000000008000000        0x0 linker stubs
+
+.v4_bx          0x0000000008000000        0x0
+ .v4_bx         0x0000000008000000        0x0 linker stubs
+
+.rodata         0x0000000008000000        0x0
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.rodata)
+ *(.rodata*)
+                0x0000000008000000                . = ALIGN (0x4)
+
+.ARM.extab      0x0000000008000000        0x0
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000008000000                . = ALIGN (0x4)
+
+.ARM            0x0000000008000000        0x0
+                0x0000000008000000                . = ALIGN (0x4)
+                0x0000000008000000                __exidx_start = .
+ *(.ARM.exidx*)
+                0x0000000008000000                __exidx_end = .
+                0x0000000008000000                . = ALIGN (0x4)
+
+.preinit_array  0x0000000008000000        0x0
+                0x0000000008000000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+                0x0000000008000000                . = ALIGN (0x4)
+
+.init_array     0x0000000008000000        0x0
+                0x0000000008000000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array*)
+                [!provide]                        PROVIDE (__init_array_end = .)
+                0x0000000008000000                . = ALIGN (0x4)
+
+.fini_array     0x0000000008000000        0x0
+                0x0000000008000000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x0000000008000000                . = ALIGN (0x4)
+                0x0000000008000000                _sidata = LOADADDR (.data)
+
+.data           0x0000000020000000        0x0 load address 0x0000000008000000
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sdata = .
+ *(.data)
+ *(.data*)
+ *(.RamFunc)
+ *(.RamFunc*)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _edata = .
+                0x0000000020000000                . = ALIGN (0x4)
+
+.bss            0x0000000020000000        0x0 load address 0x0000000008000000
+                0x0000000020000000                _sbss = .
+                0x0000000020000000                __bss_start__ = _sbss
+ *(.bss)
+ *(.bss*)
+ *(COMMON)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _ebss = .
+                0x0000000020000000                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x0000000020000000      0x600 load address 0x0000000008000000
+                0x0000000020000000                . = ALIGN (0x8)
+                [!provide]                        PROVIDE (end = .)
+                [!provide]                        PROVIDE (_end = .)
+                0x0000000020000200                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000000      0x200 
+                0x0000000020000600                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000200      0x400 
+                0x0000000020000600                . = ALIGN (0x8)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+ *(.ARM.attributes)
+OUTPUT(hello.elf elf32-littlearm)
+LOAD linker stubs
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a
+LOAD /opt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
+
+Cross Reference Table
+
+Symbol                                            File
+GPIO_AFIODeInit                                   libsys.a(stm32f10x_gpio.c.o)
+GPIO_DeInit                                       libsys.a(stm32f10x_gpio.c.o)
+GPIO_ETH_MediaInterfaceConfig                     libsys.a(stm32f10x_gpio.c.o)
+GPIO_EXTILineConfig                               libsys.a(stm32f10x_gpio.c.o)
+GPIO_EventOutputCmd                               libsys.a(stm32f10x_gpio.c.o)
+GPIO_EventOutputConfig                            libsys.a(stm32f10x_gpio.c.o)
+GPIO_Init                                         libsys.a(stm32f10x_gpio.c.o)
+                                                  CMakeFiles/hello.elf.dir/USER/main.c.o
+GPIO_PinLockConfig                                libsys.a(stm32f10x_gpio.c.o)
+GPIO_PinRemapConfig                               libsys.a(stm32f10x_gpio.c.o)
+GPIO_ReadInputData                                libsys.a(stm32f10x_gpio.c.o)
+GPIO_ReadInputDataBit                             libsys.a(stm32f10x_gpio.c.o)
+GPIO_ReadOutputData                               libsys.a(stm32f10x_gpio.c.o)
+GPIO_ReadOutputDataBit                            libsys.a(stm32f10x_gpio.c.o)
+GPIO_ResetBits                                    libsys.a(stm32f10x_gpio.c.o)
+GPIO_SetBits                                      libsys.a(stm32f10x_gpio.c.o)
+GPIO_StructInit                                   libsys.a(stm32f10x_gpio.c.o)
+GPIO_Write                                        libsys.a(stm32f10x_gpio.c.o)
+GPIO_WriteBit                                     libsys.a(stm32f10x_gpio.c.o)
+RCC_ADCCLKConfig                                  libsys.a(stm32f10x_rcc.c.o)
+RCC_AHBPeriphClockCmd                             libsys.a(stm32f10x_rcc.c.o)
+RCC_APB1PeriphClockCmd                            libsys.a(stm32f10x_rcc.c.o)
+RCC_APB1PeriphResetCmd                            libsys.a(stm32f10x_rcc.c.o)
+RCC_APB2PeriphClockCmd                            libsys.a(stm32f10x_rcc.c.o)
+                                                  CMakeFiles/hello.elf.dir/USER/main.c.o
+RCC_APB2PeriphResetCmd                            libsys.a(stm32f10x_rcc.c.o)
+                                                  libsys.a(stm32f10x_gpio.c.o)
+RCC_AdjustHSICalibrationValue                     libsys.a(stm32f10x_rcc.c.o)
+RCC_BackupResetCmd                                libsys.a(stm32f10x_rcc.c.o)
+RCC_ClearFlag                                     libsys.a(stm32f10x_rcc.c.o)
+RCC_ClearITPendingBit                             libsys.a(stm32f10x_rcc.c.o)
+RCC_ClockSecuritySystemCmd                        libsys.a(stm32f10x_rcc.c.o)
+RCC_DeInit                                        libsys.a(stm32f10x_rcc.c.o)
+RCC_GetClocksFreq                                 libsys.a(stm32f10x_rcc.c.o)
+RCC_GetFlagStatus                                 libsys.a(stm32f10x_rcc.c.o)
+RCC_GetITStatus                                   libsys.a(stm32f10x_rcc.c.o)
+RCC_GetSYSCLKSource                               libsys.a(stm32f10x_rcc.c.o)
+RCC_HCLKConfig                                    libsys.a(stm32f10x_rcc.c.o)
+RCC_HSEConfig                                     libsys.a(stm32f10x_rcc.c.o)
+RCC_HSICmd                                        libsys.a(stm32f10x_rcc.c.o)
+RCC_ITConfig                                      libsys.a(stm32f10x_rcc.c.o)
+RCC_LSEConfig                                     libsys.a(stm32f10x_rcc.c.o)
+RCC_LSICmd                                        libsys.a(stm32f10x_rcc.c.o)
+RCC_MCOConfig                                     libsys.a(stm32f10x_rcc.c.o)
+RCC_PCLK1Config                                   libsys.a(stm32f10x_rcc.c.o)
+RCC_PCLK2Config                                   libsys.a(stm32f10x_rcc.c.o)
+RCC_PLLCmd                                        libsys.a(stm32f10x_rcc.c.o)
+RCC_PLLConfig                                     libsys.a(stm32f10x_rcc.c.o)
+RCC_RTCCLKCmd                                     libsys.a(stm32f10x_rcc.c.o)
+RCC_RTCCLKConfig                                  libsys.a(stm32f10x_rcc.c.o)
+RCC_SYSCLKConfig                                  libsys.a(stm32f10x_rcc.c.o)
+RCC_USBCLKConfig                                  libsys.a(stm32f10x_rcc.c.o)
+RCC_WaitForHSEStartUp                             libsys.a(stm32f10x_rcc.c.o)
+TIM1_Init                                         CMakeFiles/hello.elf.dir/USER/main.c.o
+can_config                                        CMakeFiles/hello.elf.dir/USER/main.c.o
+can_gpio_config                                   CMakeFiles/hello.elf.dir/USER/main.c.o
+main                                              CMakeFiles/hello.elf.dir/USER/main.c.o

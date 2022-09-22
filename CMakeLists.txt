@@ -3,6 +3,12 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_VERSION 1)
 cmake_minimum_required(VERSION 3.16)
 
+# project settings
+project(led_test C CXX ASM)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_C_STANDARD 11)
+
+
 # specify cross-compilers and tools
 set(CMAKE_C_COMPILER arm-none-eabi-gcc)
 set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
@@ -13,10 +19,7 @@ set(CMAKE_OBJDUMP arm-none-eabi-objdump)
 set(SIZE arm-none-eabi-size)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
-# project settings
-project(led_test C CXX ASM)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_C_STANDARD 11)
+set(USE_ROM_SIZE STM32F10X_HD)
 
 #Uncomment for hardware floating point
 #add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
@@ -57,7 +60,7 @@ include_directories(CORE
                     USER
         )
 
-add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD)
+add_definitions(-DDEBUG -DSTM32F103xE -DUSE_STDPERIPH_DRIVER -D${USE_ROM_SIZE})
 
 file(GLOB_RECURSE SOURCES 
         "CORE/*.c"
@@ -69,7 +72,14 @@ file(GLOB_RECURSE SOURCES
         
         )
 
-list(APPEND SOURCES "CORE/startup_stm32f10x_hd.s")
+if(USE_ROM_SIZE STREQUAL STM32F10X_HD)
+    list(APPEND SOURCES "CORE/startup_stm32f10x_hd.s")
+elseif(USE_ROM_SIZE STREQUAL STM32F10X_MD)
+    list(APPEND SOURCES "CORE/startup_stm32f10x_md.s")
+endif()
+message(STATUS >>> ${USE_ROM_SIZE})
+
+list(APPEND SOURCES "")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103RCTX_FLASH.ld)
 
